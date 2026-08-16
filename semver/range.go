@@ -353,7 +353,8 @@ func matchesSet(v Version, comps []comparator) bool {
 		for _, c := range comps {
 			if len(c.version.Prerelease) > 0 &&
 				c.version.Major == v.Major &&
-				c.version.Minor == v.Minor {
+				c.version.Minor == v.Minor &&
+				c.version.Patch == v.Patch {
 				ok = true
 				break
 			}
